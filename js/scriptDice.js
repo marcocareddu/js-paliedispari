@@ -42,6 +42,7 @@ evenOddButton.addEventListener('click', function () {
         console.log(`Il numero ${sumNumber} è dipari!`);
     };
 
+    // Print result on console
+    (evenOddResult === result) ? console.log('Hai vinto!') : console.log('Hai perso!');
 })
 
-// (selectInput === result) ? 
