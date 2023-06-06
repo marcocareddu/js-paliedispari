@@ -43,26 +43,22 @@ Consigli del giorno
 - Prendere l'input number e salvarlo nella variabile `numberInput`.
 - Creare la variabile `cpuNumber`.
 - Creare la varibile `sumNumber`.
-- Creare la variabile `userEvenOdd`.
 - Creare la variabile `result`.
 
 ## Svolgimento
 - Creare una funzione `random` che *ritorna* un numero random da 1 a 5.
 - Assegnare a `numberInput` il valore della funzione `random`.
 - Assegnare a `sumNumber` la somma di `numberInput` e `cpuNumber`.
-- **SE** l'utente ha scelto *pari*:
-    - `userEvenOdd` = 'Pari'.
-- **ALTRIMENTI** - `userEvenOdd` = 'Dispari'.
 - Creare una funzione `isEven` con 1 paramentro `number`:
     - Creo una variabile `numberRest` a cui assegno il valore di `number % 2`.
     - *Ritorno* il booleano di `numberRest` === 0.
 - **SE** `isEven` di `sumNumber` è `true`:
-    - `result` = 'Pari'.
+    - `result` = 'even'.
     - Stampa: *"Il numero è pari!"*.
 - **ALTRIMENTI**:
-    - `result` = 'Dispari'.
+    - `result` = 'odd'.
     - Stampa: *"Il numero è dispari!"*.
-- **SE** `userEvenOdd` === `result`:
+- **SE** `selectInput` === `result`:
     - Stampa: *"Hai Vinto!*
 - **ALTRIMENTI**:
     - Stampa: *"Ha vinto la CPU!*
