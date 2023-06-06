@@ -5,7 +5,7 @@ console.log('JS DICE OK');
 // Link to DOM element
 const evenOddButton = document.getElementById('even-odd-btn');
 const numberInput = document.getElementById('user-number');
-// const userNumber = 3;
+let resultEvenElement = document.getElementById('even-odd-result');
 
 // *PHASE 2
 
@@ -24,6 +24,9 @@ function isEven(number) {
 // Get user input on click
 evenOddButton.addEventListener('click', function () {
 
+    // Display result card in DOM
+    resultEvenElement.classList.remove('d-none');
+
     // Create var
     const cpuNumber = random();
     const userNumber = numberInput.value;
@@ -35,14 +38,24 @@ evenOddButton.addEventListener('click', function () {
 
     // Even control
     if (isEven(sumNumber)) {
-        result = 'even';
+        result = 'pari';
         console.log(`Il numero ${sumNumber} è pari!`);
     } else {
-        result = 'odd';
+        result = 'dispari';
         console.log(`Il numero ${sumNumber} è dipari!`);
     };
 
     // Print result on console
-    (evenOddResult === result) ? console.log('Hai vinto!') : console.log('Hai perso!');
+    if (evenOddResult === result) {
+        resultEvenElement.innerHTML =
+            `<p>Il numero ${sumNumber} è ${result}</p>
+            <p>Hai Vinto!</p>`
+        console.log('Hai vinto!')
+    } else {
+        resultEvenElement.innerHTML =
+            `<p>Il numero ${sumNumber} è ${result}</p>
+            <p>Hai Perso!</p>`
+        console.log('Hai perso!');
+    }
 })
 
