@@ -6,10 +6,12 @@ console.log('JS DICE OK');
 const evenOddButton = document.getElementById('even-odd-btn');
 const selectInput = document.querySelector('select');
 const numberInput = document.getElementById('user-number');
+// const userNumber = numberInput.value;
+const userNumber = 3;
 
 // Create var
-let cpuNumber;
-let sumNumber;
+const cpuNumber = random();
+let sumNumber = parseInt(userNumber) + cpuNumber;
 let evenOddResult;
 
 // Create random function
@@ -17,3 +19,10 @@ function random() {
     const random = Math.floor(Math.random() * 5) + 1;
     return random;
 }
+
+// Create isEven function
+function isEven(number) {
+    const numberRest = number % 2;
+    return numberRest === 0;
+}
+
