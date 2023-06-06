@@ -25,7 +25,7 @@ Consigli del giorno
  ## Svolgimento
  - Creare una funzione `isPalindrome` con 1 paramentro `word`.
     - Dichiarare la variabile d'appoggio `reverseWord`.
-    - **CICLARE** tante volte quante sono le lettere di `userInput` fino a 0.
+    - **CICLARE** tante volte quante sono le lettere di `word` fino a 0.
         - **PER OGNI CICLO** appendere la lettera indice nella variabile `reverseWord`.
     - *Ritorno* il booleano di `word` è uguale a `reverseWord`.
 
