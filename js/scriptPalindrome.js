@@ -6,6 +6,8 @@ console.log('JS PALINDROME OK');
 // Link to DOM Elements
 const userInput = document.getElementById('user-input');
 const button = document.querySelector('button');
+let resultElement = document.getElementById('palindrome-result');
+let result = '';
 
 // Create Function isPalindrome
 function isPalindrome(word) {
@@ -18,7 +20,18 @@ function isPalindrome(word) {
 
 // Get user input on click
 button.addEventListener('click', function () {
+    // Trim and lowercase user input
     const word = userInput.value.trim().toLowerCase();
-    console.log(word);
-    isPalindrome(word) ? console.log('Success') : console.log('Unsuccess');
+
+    // Display card with result
+    resultElement.classList.remove('d-none');
+    if (isPalindrome(word)) {
+
+        resultElement.innerHTML = `<p>La parola ${word} è palindroma! </p>`;
+        console.log('Success')
+    } else {
+
+        resultElement.innerHTML = `<p>La parola ${word} NON è palindroma!</p>`;
+        console.log('Unsuccess');
+    }
 })
