@@ -20,6 +20,8 @@
 <body>
     <div class="container my-5">
         <div class="row">
+
+            <!-- Palindrome Section -->
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
@@ -31,19 +33,27 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Even ODD Section -->
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Scegli Pari o Dispari</h5>
                         <select class="form-select">
                             <option selected>Seleziona...</option>
-                            <option value="1">Pari</option>
-                            <option value="2">Dispari</option>
+                            <option value="even">Pari</option>
+                            <option value="odd">Dispari</option>
                         </select>
+                        <div class="input-group mb-3">
+                            <input id="user-number" type="number" class="form-control"
+                                placeholder="Inserisci il numero">
+                        </div>
                         <button class="btn btn-primary">Verifica</button>
                     </div>
                 </div>
             </div>
+
+            <!-- Result Section -->
             <div class="card">
                 <div id="palindrome-result" class="card-body d-none"></div>
             </div>
