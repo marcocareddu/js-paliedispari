@@ -15,3 +15,22 @@ Consigli del giorno
 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
  -->
+
+ # Palindroma
+
+ ## Fase preliminare
+ - Collegare gli elementi del DOM.
+ - Prendere l'input dell'utente e salvarlo nella variabile `userInput`. 
+
+ ## Svolgimento
+ - Creare una funzione `isPalindrome` con 1 paramentro `word`.
+    - Dichiarare la variabile d'appoggio `reverseWord`.
+    - **CICLARE** tante volte quante sono le lettere di `userInput` fino a 0.
+        - **PER OGNI CICLO** appendere la lettera indice nella variabile `reverseWord`.
+    - *Ritorno* il booleano di `word` è uguale a `reverseWord`.
+
+- **SE** `isPalindrome` è true:
+    - Stampa: *"La parola è palindroma"*.
+- **ALTRIMENTI** 
+    - Stampa: *"La parola NON è palindroma"*.
+
