@@ -12,9 +12,13 @@ function isPalindrome(word) {
     let reverseWord = '';
     for (let i = word.length; i >= 0; i--) {
         reverseWord += word.charAt(i);
-        console.log(reverseWord);
     }
     return reverseWord === word;
 }
 
-console.log(isPalindrome('anna'));
+// Get user input on click
+button.addEventListener('click', function () {
+    const word = userInput.value.trim().toLowerCase();
+    console.log(word);
+    isPalindrome(word) ? console.log('Success') : console.log('Unsuccess');
+})
