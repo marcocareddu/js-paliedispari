@@ -26,3 +26,11 @@ function isEven(number) {
     return numberRest === 0;
 }
 
+// Even control
+if (isEven(sumNumber)) {
+    result = 'even';
+    console.log(`Il numero ${sumNumber} è pari!`);
+} else {
+    result = 'odd';
+    console.log(`Il numero ${sumNumber} è dipari!`);
+};
