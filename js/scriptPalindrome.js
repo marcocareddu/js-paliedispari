@@ -9,15 +9,12 @@ const button = document.querySelector('button');
 
 // Create Function isPalindrome
 function isPalindrome(word) {
-    let reverseWord;
-    for (let i = word.length; i === 0; i--) {
+    let reverseWord = '';
+    for (let i = word.length; i >= 0; i--) {
         reverseWord += word.charAt(i);
-        return reverseWord === word;
+        console.log(reverseWord);
     }
+    return reverseWord === word;
 }
 
-// Get user input on click
-button.addEventListener('click', function () {
-    const word = userInput.value;
-    console.log(word);
-})
+console.log(isPalindrome('anna'));
