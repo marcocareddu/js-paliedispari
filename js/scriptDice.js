@@ -34,28 +34,40 @@ evenOddButton.addEventListener('click', function () {
     let evenOddResult = selectInput.value;
 
     let sumNumber = parseInt(userNumber) + cpuNumber;
-    console.log(userNumber, evenOddResult);
 
-    // Even control
-    if (isEven(sumNumber)) {
-        result = 'pari';
-        console.log(`Il numero ${sumNumber} è pari!`);
-    } else {
-        result = 'dispari';
-        console.log(`Il numero ${sumNumber} è dipari!`);
-    };
+    // * Validatiom
 
-    // Print result on console
-    if (evenOddResult === result) {
-        resultEvenElement.innerHTML =
-            `<p>Il numero ${sumNumber} è ${result}</p>
+    if (userNumber > 5 || userNumber < 1 || isNaN(userNumber)) {
+
+        resultEvenElement.innerHTML = `<p>Hai inserito un numero non valido</p>`;
+        console.log('Inserisci un numero corretto!');
+    }
+    else {
+        // Even control
+        if (isEven(sumNumber)) {
+            result = 'pari';
+            console.log(`Il numero ${sumNumber} è pari!`);
+        } else {
+            result = 'dispari';
+            console.log(`Il numero ${sumNumber} è dipari!`);
+        };
+
+        // Print result on console
+        if (evenOddResult === result) {
+            resultEvenElement.innerHTML =
+                `<p>Il numero ${sumNumber} è ${result}</p>
             <p>Hai Vinto!</p>`
-        console.log('Hai vinto!')
-    } else {
-        resultEvenElement.innerHTML =
-            `<p>Il numero ${sumNumber} è ${result}</p>
+            console.log('Hai vinto!')
+        } else {
+            resultEvenElement.innerHTML =
+                `<p>Il numero ${sumNumber} è ${result}</p>
             <p>Hai Perso!</p>`
-        console.log('Hai perso!');
+            console.log('Hai perso!');
+        }
+
     }
 })
+
+
+
 
