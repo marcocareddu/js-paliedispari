@@ -47,7 +47,7 @@ Consigli del giorno
 
 ## Svolgimento
 - Creare una funzione `random` che *ritorna* un numero random da 1 a 5.
-- Assegnare a `numberInput` il valore della funzione `random`.
+- Assegnare a `cpuNumber` il valore della funzione `random`.
 - Assegnare a `sumNumber` la somma di `numberInput` e `cpuNumber`.
 - Creare una funzione `isEven` con 1 paramentro `number`:
     - Creo una variabile `numberRest` a cui assegno il valore di `number % 2`.
