@@ -1,18 +1,13 @@
 console.log('JS DICE OK');
 
 // ? ******************************* EVEN ODD *******************************
-// * Phase 1
+// * PHASE 1
 // Link to DOM element
 const evenOddButton = document.getElementById('even-odd-btn');
-const selectInput = document.querySelector('select');
 const numberInput = document.getElementById('user-number');
-// const userNumber = numberInput.value;
-const userNumber = 3;
+// const userNumber = 3;
 
-// Create var
-const cpuNumber = random();
-let sumNumber = parseInt(userNumber) + cpuNumber;
-let evenOddResult;
+// *PHASE 2
 
 // Create random function
 function random() {
@@ -26,11 +21,27 @@ function isEven(number) {
     return numberRest === 0;
 }
 
-// Even control
-if (isEven(sumNumber)) {
-    result = 'even';
-    console.log(`Il numero ${sumNumber} è pari!`);
-} else {
-    result = 'odd';
-    console.log(`Il numero ${sumNumber} è dipari!`);
-};
+// Get user input on click
+evenOddButton.addEventListener('click', function () {
+
+    // Create var
+    const cpuNumber = random();
+    const userNumber = numberInput.value;
+    const selectInput = document.querySelector('select');
+    let evenOddResult = selectInput.value;
+
+    let sumNumber = parseInt(userNumber) + cpuNumber;
+    console.log(userNumber, evenOddResult);
+
+    // Even control
+    if (isEven(sumNumber)) {
+        result = 'even';
+        console.log(`Il numero ${sumNumber} è pari!`);
+    } else {
+        result = 'odd';
+        console.log(`Il numero ${sumNumber} è dipari!`);
+    };
+
+})
+
+// (selectInput === result) ? 
